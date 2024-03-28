@@ -1,0 +1,6 @@
+C3P0 是一个开源的 JDBC 数据库连接池库，它提供了高度灵活和高性能的连接池实现。C3P0 可以与各种关系型数据库一起使用，包括 MySQL、Oracle、SQL Server 等。
+它的名称 “C3P0” 实际上代表 “Connect3 Pool”，意味着它可以管理多个数据库连接。
+
+原文链接：https://blog.csdn.net/qq_71443736/article/details/134918481
+
+

@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>  <!-- 指定pom的模型版本 -->
+  <groupId>org.example</groupId>      <!-- 组织Id -->
+  <artifactId>Maven_web</artifactId>  <!-- 项目Id -->
+  <packaging>war</packaging>    <!--  打包方式  web工程大包围war Java工程打包为jar-->
+  <version>1.0-SNAPSHOT</version>   <!-- 版本号SNAPSHOT 开发版 release 完整版 -->
+  <name>Maven_web Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- dependency中还存在直接以来和间接依赖 -->
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+      <optional>true</optional><!-- 可选依赖 让别人看不到我这个依赖 false就是看得到-->
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,9 @@
+可以使用注解来确认是否可以继承、创建doc文件、 可以自定义注解
+
+可以用注解来加载properties文件
+
+同样的反射手法 用注解加载properties文件 在practices 中的  ReflectDemo2.java
+
+在practiecs2中 我们做一个junit的测试代码 使用注解于反射的方式来进行测试 替代junit
+
+注解给谁用:1.给编译器用 2.给解析程序用(如practices2中的calculateTest)
