@@ -35,5 +35,7 @@ public class construct {
 
     public void save() {
         System.out.println("这是一个construct的List输出"+list);
+        System.out.println("这是一个construct的Map输出"+map);
+        System.out.println("这是一个construct的properties输出"+properties);
     }
 }
