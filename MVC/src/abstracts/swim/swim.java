@@ -2,7 +2,7 @@ package abstracts.swim;
 
 public abstract class swim {
     private String name;
-    private int age;
+    private int age = 0;
     private String address;
 
     public void who(){

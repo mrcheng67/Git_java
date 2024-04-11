@@ -6,6 +6,9 @@ public class DemoApplication {
         stu.swim();
         System.out.println("---------------------------------");
         stu.who();
+        System.out.println("---------------------------------");
+        stu.run();
+        stu.defaultMethod();
         swim tea = new Teacher();
         System.out.println("---------------------------------");
         tea.swim();

@@ -1,5 +1,7 @@
 package Class_inner.Iner_Block.for_lambda;
 
+import Class_inner.Iner_Block.swim;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.Consumer;
@@ -24,6 +26,9 @@ public class for_lambda {
             }
         });
         // 简化版
-        ch.forEach((String s) -> System.out.println("ch中的值为: "+s));
+        ch.forEach((String s) -> System.out.println("最简版中的值为: "+s));
+
+        ch.forEach(s -> System.out.println("ch中的值为: "+s));
+
     }
 }

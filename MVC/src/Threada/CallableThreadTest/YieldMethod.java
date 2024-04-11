@@ -14,14 +14,12 @@ public class YieldMethod {
                 }
             }
         };
-        Thread t2 = new Thread("任务2") {
-            @Override
-            public void run() {
+        Thread t2 = new Thread(()-> {
                 for (int i = 0; i < 50; i++) {
-                    System.out.println(getName()+"------" + i);
+                    System.out.println(Thread.currentThread().getName()+"------" + i);
                 }
             }
-        };
+        ,"任务2");
         // t1和t2的优先级一样,都是5,能触发yield方法.
         t1.start();
         t2.start();
