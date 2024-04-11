@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <!--    我们直接在这个xml文件中读取到properties中的配置文件等  如同我在config文件中写的这个注解一样 @Bean("datasource")
+    <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${driver}"/>
+        <property name="jdbcUrl" value="${url}"/>
+        <property name="user" value="${user}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+    -->
+    <!--
+    <bean id="bookDao" name="niudehua" class="org.example.Annotation.dao.Impl.DaoImpl">
+        <property name="num" value="10"/>
+        <property name="DataName" value="cheng"/>
+    </bean>
+    <bean id="service" class="org.example.Annotation.service.Impl.ServiceImpl">
+        <property name="dao" ref="niudehua"/>
+    </bean>
+    -->
+
+    <!--    配置组件扫描  注解取代上面注释代码    如同我在config文件中写的这个注解一样 @ComponentScan("org.example.Annotation")  //自动扫描组件
+    <context:component-scan base-package="org.example.Annotation"/>-->
+</beans>
