@@ -1,9 +1,9 @@
-package list;
+package AllOfShuZu.generic;
 
 import java.util.*;
 
 public class ListUtil {
-    public <E> Boolean addAll(ArrayList<E> Array, E...e){ // 添加很多的元素
+    public static <E> Boolean addAll(ArrayList<E> Array, E... e){ // 添加很多的元素
         for(E a:e){
             Array.add(a);
         }
@@ -11,7 +11,14 @@ public class ListUtil {
     }
 
     public static void main(String[] args){
-
+        ArrayList<String> array = new ArrayList<>();
+        array.add("zhangs");
+        array.add("赵六");
+        array.add("王五 ");
+        array.add("李四");
+        array.add("程");
+        System.out.println(addAll(array,"程1","程2","程3","程"));
+        System.out.println(array);
     }
 }
 

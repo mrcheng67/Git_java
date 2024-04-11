@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!--  1.导入Spring的坐标spring-context ,对应的斑纹为5。2.10.RELEASE -->
+        <!--  b2. 配置bean  id属性表示给bean起名字 class给bean定义类型 -->
+    <!-- 第一种方法  -->
+    <!--
+    <bean id="bookDao" name="niudehua" class="com.jinan.dao.Impl.DaoImpl">
+        <constructor-arg name="num" value="10"/>        构造器赋值
+        <constructor-arg name="dataName" value="ch"/>
+    </bean>
+
+    -->  <!--name是一个别名 算是昵称 可以 取多个名字-->
+    <bean id="bookDao" name="niudehua" class="com.jinan.dao.Impl.DaoImpl">
+        <property name="num" value="10"/>
+        <property name="DataName" value="cheng"/>
+    </bean>
+    <!--<bean id="service" class="com.jinan.service.Impl.ServiceImpl">
+        <property name="dao" ref="niudehua"/>
+    </bean>-->
+    <!--第二种方法 用factorybean方式    -->
+    <bean id="Userservicee" class="com.jinan.Factory.factorybean">
+        <property name="dao" ref="bookDao" />
+    </bean>
+
+    <!--
+    <bean id="Userservicee" class="com.jinan.service.Impl.ServiceImpl">      构造器注入
+        <property name="dao" ref="bookDao"/>                                        -->
+        <!--<constructor-arg name="dao" ref="bookDao"/>         这个是被注释掉的
+    </bean>                                                 -->
+    <!--    使用P标签 简便一点
+        <bean id="Userservicee" class="com.jinan.service.Impl.ServiceImpl" p:dao-ref="bookDao"/>
+    -->
+
+    <!--                 对于数组等 集合数据类型                      -->
+    <bean id="Userconstruct" class="com.jinan.construct.construct">
+        <property name="list" >
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+    </bean>
+</beans>

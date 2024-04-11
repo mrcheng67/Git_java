@@ -1,4 +1,7 @@
-list : 输出数组数据的方式
+
+主要写的是泛型
+
+AllOfShuZu.generic : 输出数组数据的方式
 
 field : 泛型 泛型类
 
