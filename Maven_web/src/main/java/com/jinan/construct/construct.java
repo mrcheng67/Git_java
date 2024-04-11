@@ -6,7 +6,7 @@ import java.util.Properties;
 
 public class construct {
     private List<String> list;
-    private Map<String,Integer> map;
+    private Map<String,User> map;
     private Properties properties;
 
     public List<String> getList() {
@@ -17,11 +17,11 @@ public class construct {
         this.list = list;
     }
 
-    public Map<String, Integer> getMap() {
+    public Map<String, User> getMap() {
         return map;
     }
 
-    public void setMap(Map<String, Integer> map) {
+    public void setMap(Map<String, User> map) {
         this.map = map;
     }
 
@@ -34,8 +34,8 @@ public class construct {
     }
 
     public void save() {
-        System.out.println("这是一个construct的List输出"+list);
-        System.out.println("这是一个construct的Map输出"+map);
-        System.out.println("这是一个construct的properties输出"+properties);
+        System.out.println("这是一个construct的List输出\t"+list);
+        System.out.println("这是一个construct的Map输出\t"+map);
+        System.out.println("这是一个construct的properties输出\t"+properties);
     }
 }

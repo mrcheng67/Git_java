@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
         <!--  1.导入Spring的坐标spring-context ,对应的斑纹为5。2.10.RELEASE -->
         <!--  b2. 配置bean  id属性表示给bean起名字 class给bean定义类型 -->
     <!-- 第一种方法  -->
@@ -20,16 +20,15 @@
     <!--<bean id="service" class="com.jinan.service.Impl.ServiceImpl">
         <property name="dao" ref="niudehua"/>
     </bean>-->
-    <!--第二种方法 用factorybean方式    -->
+    <!--第二种方法 用factorybean方式
     <bean id="Userservicee" class="com.jinan.Factory.factorybean">
         <property name="dao" ref="bookDao" />
-    </bean>
+    </bean>         -->
 
-    <!--
-    <bean id="Userservicee" class="com.jinan.service.Impl.ServiceImpl">      构造器注入
-        <property name="dao" ref="bookDao"/>                                        -->
-        <!--<constructor-arg name="dao" ref="bookDao"/>         这个是被注释掉的
-    </bean>                                                 -->
+
+    <bean id="Userservicee" class="com.jinan.service.Impl.ServiceImpl">      <!--构造器注入-->
+        <constructor-arg name="dao" ref="bookDao"/>         <!--      这个是被注释掉的-->
+    </bean>
     <!--    使用P标签 简便一点
         <bean id="Userservicee" class="com.jinan.service.Impl.ServiceImpl" p:dao-ref="bookDao"/>
     -->
@@ -43,5 +42,27 @@
                 <value>ccc</value>
             </list>
         </property>
+        <property name="map">
+            <map>
+                <entry key="1" value-ref="user"></entry><!--  表示key的值为1 value 为User类型 指向下面的user  -->
+                <entry key="2" value-ref="user1"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="u1">aaa</prop>
+                <prop key="u2">uuu</prop>
+                <prop key="u3">vvv</prop>
+            </props>
+        </property>
     </bean>
+    <bean id="user" class="com.jinan.construct.User">
+        <property name="name" value="chenghao"></property>
+        <property name="age" value="18"></property>
+    </bean>
+    <bean id="user1" class="com.jinan.construct.User">
+        <property name="name" value="niudehua"></property>
+        <property name="age" value="68"></property>
+    </bean>
+
 </beans>
